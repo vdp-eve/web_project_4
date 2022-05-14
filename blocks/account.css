@@ -1,0 +1,105 @@
+.account {
+  display: flex;
+  margin: auto;
+  padding-top: 40px;
+  align-items: center;
+}
+
+.account__name {
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 48px;
+}
+
+.account__info {
+  max-width: 415px;
+  display: flex;
+  column-gap: 18px;
+  margin-left: 30px;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.account__edit-button {
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+  background-color: #000;
+  border: 1px solid #fff;
+  background-image: url(../images/Edit_Button.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.account__edit-button:hover {
+  opacity: 0.6;
+}
+
+.account__description {
+  flex-wrap: wrap;
+  margin-top: 0;
+}
+
+.account__add-button {
+  display: block;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  background-color: #000;
+  border: 1px solid #fff;
+  background-image: url(../images/add.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.account__add-button:hover {
+  opacity: 0.6;
+}
+
+.account__image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 879px) {
+  .account__name {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+    text-align: center;
+  }
+
+  .account__description {
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    align-self: center;
+    justify-content: center;
+    justify-self: center;
+    margin: 0 auto;
+  }
+
+  .account__add-button {
+    margin-top: 36px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .account {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .account__add-button {
+    width: 90%;
+    align-self: center;
+    margin: 0 19px;
+  }
+
+  .account__info input {
+    text-overflow: ellipsis;
+  }
+}
