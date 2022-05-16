@@ -9,7 +9,7 @@
 - "Around the U.S." is a responsive layout website that
   displays a social media like plaform to post photos of
   places you have traveled. It also includes a feature to
-  chnage your name and title description with a popup box.
+  change your name and title description with a popup box.
 
 **Technolgies and Techniques Used**
 
