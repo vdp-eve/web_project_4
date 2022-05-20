@@ -1,0 +1,9 @@
+.content {
+  max-width: 880px;
+  min-width: 300px;
+  margin: auto;
+}
+
+.content__section {
+  margin: 0;
+}
