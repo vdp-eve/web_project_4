@@ -1,0 +1,64 @@
+.card {
+  max-width: 282px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.card__image {
+  width: 282px;
+  height: 282px;
+  border-radius: 10px 10px 0px 0px;
+  display: block;
+  cursor: pointer;
+}
+
+.card__button_type_delete {
+  background-image: url(../images/trash_bin.svg);
+  background-repeat: no-repeat;
+  border: none;
+  background-color: rgba(0, 0, 255, 0);
+  position: absolute;
+  right: 15px;
+  top: 18px;
+  width: 18px;
+  height: 19.3px;
+}
+
+.card__card-description {
+  background-color: #fff;
+  padding: 25px 15px 31px 21px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0 0 10px 10px;
+}
+
+.card__title {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0;
+}
+
+.card__button_type_like {
+  background-image: url(../images/like_button.svg);
+  background-repeat: no-repeat;
+  border: none;
+  background-color: rgba(0, 0, 255, 0);
+  width: 21px;
+  height: 19px;
+  align-self: center;
+  padding: 0;
+  transition-duration: 1s;
+}
+
+.card__button_type_active {
+  background-image: url(../images/like_button_active.svg);
+}
+
+.card__button:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
