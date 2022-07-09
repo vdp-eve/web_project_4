@@ -21,11 +21,11 @@
 
 **Github Link**
 
-- [Link to the Project's Github Files](https://github.com/vdp-eve/ce_project_aroundtheus)
+- [Link to the Project's Github Files](https://github.com/vdp-eve/web_project_4)
 
 **Github Live Link**
 
-- [Link to the project's live link'](https://vdp-eve.github.io/ce_project_aroundtheus/)
+- [Link to the project's live link'](https://vdp-eve.github.io/web_project_4/)
 
 ### Overview
 
