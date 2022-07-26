@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Around the US" />
+    <meta name="keywords" content="Around the US" />
+    <meta name="author" content="Evelyne Benazzouz" />
+    <title>Around The U.S.</title>
+  </head>
+
+  <body class="body">
+    <div class="page">
+      <header class="header">
+        <img
+          src="<%=require('./images/logo.svg')%>"
+          alt="Homeland"
+          class="header__logo"
+        />
+      </header>
+      <main class="main">
+        <section class="account">
+          <img
+            class="account__image"
+            src="<%=require('./images/jacques.png')%>"
+            alt="Photo of place"
+          />
+
+          <div class="account__edit-column">
+            <div class="account__edit">
+              <h1 class="account__edit-name">Jacques Cousteau</h1>
+              <button class="account__edit-btn" type="button">
+                <img
+                  class="account__edit-icon"
+                  src="<%=require('./images/edit.svg')%>"
+                  alt="Edit button"
+                />
+              </button>
+            </div>
+            <p class="account__about-me">Explorer</p>
+          </div>
+
+          <button class="account__add-places-btn" type="button">
+            <img
+              class="account__add-places-icon"
+              src="<%=require('./images/plus-sign.svg')%>"
+              alt="Add place"
+            />
+          </button>
+        </section>
+        <section class="cards">
+          <ul class="cards__list"></ul>
+          <div class="cards__no-places">
+            <p class="cards__no-places-text">No images to display</p>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <p class="footer__copyright">© 2022 Around The U.S.</p>
+      </footer>
+    </div>
+    <!-- ---------------------------- edit account ----------------------------- -->
+    <div id="edit__account" class="popup">
+      <div class="popup__overlay"></div>
+      <div class="popup__form-card">
+        <button class="popup__close-btn popup__edit-close-btn" type="button">
+          <img
+            class="popup__close-icon"
+            src="<%=require('./images/close-icon.svg')%>"
+            alt=""
+          />
+        </button>
+        <form class="popup__edit-form popup__form" name="editaccountForm">
+          <h2 class="popup__form-label">Edit account</h2>
+          <input
+            id="name-input"
+            minlength="2"
+            maxlength="40"
+            class="popup__form-input js-input-type-account-name"
+            name="name"
+            type="text"
+            placeholder="Name"
+            required
+          /><span class="popup__input-type-error name-input-error"></span>
+          <input
+            id="about-input"
+            minlength="2"
+            maxlength="200"
+            class="popup__form-input js-input-type-account-about-me"
+            name="occupation"
+            type="text"
+            placeholder="About Me"
+            required
+          /><span class="popup__input-type-error about-input-error"></span>
+          <button class="popup__button" type="submit">Save</button>
+        </form>
+      </div>
+    </div>
+    <!-- ------------------------------ add place ------------------------------ -->
+    <div id="add-place-popup" class="popup">
+      <div class="popup__overlay"></div>
+      <div class="popup__form-card">
+        <button class="popup__close-btn popup__place-close-btn" type="button">
+          <img
+            class="popup__close-icon"
+            src="<%=require('./images/close-icon.svg')%>"
+            alt=""
+          />
+        </button>
+        <form class="popup__place-form popup__form" name="addPlaceForm">
+          <h2 class="popup__form-label">Add Place</h2>
+          <input
+            id="js-input-place-name-input"
+            minlength="1"
+            maxlength="30"
+            class="popup__form-input js-input-type-place-name"
+            name="name"
+            type="text"
+            placeholder="Title"
+            required
+          /><span
+            class="popup__input-type-error js-input-place-name-input-error"
+          ></span>
+          <input
+            id="js-input-place-url-input"
+            class="popup__form-input js-input-type-place-url"
+            name="link"
+            type="url"
+            placeholder="Url Link"
+            required
+          /><span
+            class="popup__input-type-error js-input-place-url-input-error"
+          ></span>
+          <button class="popup__button" type="submit">Save</button>
+        </form>
+      </div>
+    </div>
+    <!------popup image-->
+    <div id="view__image" class="popup">
+      <div class="popup__overlay"></div>
+      <div class="popup__form-card popup__form-image">
+        <button class="popup__close-btn popup__image-close-btn" type="button">
+          <img
+            class="popup__close-icon"
+            src="<%=require('./images/close-icon.svg')%>"
+            alt=""
+          />
+        </button>
+        <img
+          class="popup__card-image-preview"
+          src="<%=require('./images/loader.png')%>"
+          alt="Photo of place"
+        />
+        <p class="popup__card-image-preview-name">loading...</p>
+      </div>
+    </div>
+    <!-- ---------------------------- card template ---------------------------- -->
+    <template id="card-template">
+      <li class="card">
+        <img
+          class="card__image"
+          src="<%=require('./images/loader.png')%>"
+          alt="Photo of place"
+        />
+        <button class="card__trash">
+          <img
+            class="card__trash-image"
+            src="<%=require('./images/Trash.svg')%>"
+            alt="Trash"
+          />
+        </button>
+        <div class="card__place-title">
+          <h2 class="card__place-name">loading...</h2>
+          <div class="card__place-favorite"></div>
+        </div>
+      </li>
+    </template>
+  </body>
+</html>
