@@ -1,0 +1,77 @@
+.card {
+  width: 282px;
+  height: 361px;
+  border-radius: 10px;
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.card__image {
+  display: block;
+  height: 282px;
+  object-fit: cover;
+  width: 100%;
+  cursor: pointer;
+}
+
+.card__place-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 25px 15px 31px 21px;
+}
+
+.card__place-name {
+  margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #000;
+  font-size: 24px;
+  font-weight: 900;
+  text-align: left;
+}
+
+.card__place-favorite {
+  background-image: url(../images/heart.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-width: 21px;
+  height: 19px;
+  transition: 0.2s;
+  color: transparent;
+}
+
+.card__place-favorite:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.card__place-favorite_active {
+  background-image: url(../images/heart-fill.svg);
+}
+
+.card__trash {
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  opacity: 0;
+  background: none;
+  border: none;
+  transition: 0.3s;
+}
+
+.card__trash:hover {
+  cursor: pointer;
+}
+
+.card:hover .card__trash {
+  opacity: 1;
+}
+
+@media screen and (max-width: 778px) {
+  .card__trash {
+    opacity: 1;
+  }
+}
