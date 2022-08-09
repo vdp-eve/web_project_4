@@ -11,51 +11,50 @@
   </head>
 
   <body class="page">
-      <header class="header">
+    <header class="header">
+      <img
+        src="<%=require('./images/logo.svg')%>"
+        class="header__logo"
+        alt="Homeland"
+      />
+    </header>
+    <main class="main">
+      <section class="account">
         <img
-          src="<%=require('./images/logo.svg')%>"
-          class="header__logo"
-          alt="Homeland"
+          class="account__icon-photo"
+          src="<%=require('./images/jacques.png')%>"
+          alt="Photo of Place"
         />
-      </header>
-      <main class="main">
-        <section class="account">
-          <img
-            class="account__icon-photo"
-            src="<%=require('./images/jacques.png')%>"
-            alt="Photo of Place"
-          />
 
-          <div class="account__edit-section">
-            <div class="account__edit">
-              <h1 class="account__name">Evelyne Benazzouz</h1>
-              <button class="account__edit-button" type="button">
-                <img
-                  class="account__edit-icon"
-                  src="<%=require('./images/edit.svg')%>"
-                  alt="Edit button"
-                />
-              </button>
-            </div>
-            <p class="account__description">Programmer</p>
+        <div class="account__edit-section">
+          <div class="account__edit">
+            <h1 class="account__name">Evelyne Benazzouz</h1>
+            <button class="account__edit-button" type="button">
+              <img
+                class="account__edit-icon"
+                src="<%=require('./images/edit.svg')%>"
+                alt="Edit button"
+              />
+            </button>
           </div>
+          <p class="account__description">Programmer</p>
+        </div>
 
-          <button class="account__add-button" type="button">
-            <img
-              class="account__add-icon"
-              src="<%=require('./images/plus-sign.svg')%>"
-              alt="Add Place"
-            />
-          </button>
-        </section>
-        <section class="cards">
-          <ul class="cards__list"></ul>
-        </section>
-      </main>
-      <footer class="footer">
-        <p class="footer__copyright">© 2022 Around The U.S.</p>
-      </footer>
-    </div>
+        <button class="account__add-button" type="button">
+          <img
+            class="account__add-icon"
+            src="<%=require('./images/plus-sign.svg')%>"
+            alt="Add Place"
+          />
+        </button>
+      </section>
+      <section class="cards">
+        <ul class="cards__list"></ul>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__copyright">© 2022 Around The U.S.</p>
+    </footer>
     <div id="account__edit" class="popup">
       <div class="popup__overlay"></div>
       <div class="popup__form-card">
@@ -155,7 +154,9 @@
         <div class="card__place-title">
           <h2 class="card__place-name"></h2>
           <div class="card__place-favorite"></div>
+        </div>
       </li>
     </template>
   </body>
 </html>
+
