@@ -52,4 +52,6 @@ getCardList() {
 
 
 
-}
+};
+
+export default Api;
