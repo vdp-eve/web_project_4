@@ -72,7 +72,7 @@ api.getCardList().then(cardData => {
     }, 
     placeList 
   ); 
-})
+});
 
 
 
