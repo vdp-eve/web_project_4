@@ -7,9 +7,9 @@ import Card from "../components/Card.js";
 import PopupWithForm from "../components/PopupWithForm.js";
 import PopupWithImage from "../components/PopupWithImage.js";
 import Section from "../components/Section.js";
+import Api from "../components/api.js"
 import UserInfo from "../components/UserInfo.js";
 import {
-  initialCards,
   editAccountOpenBtn,
   accountName,
   accountTitle,
@@ -27,6 +27,13 @@ import {
   placeList,
   validationSettings,
 } from "../utils/constants.js";
+
+const api = new Api ({
+baseUrl: "https://around.nomoreparties.co/v1/group-12",
+authToken: "099989f7-9742-46ef-99f8-aa8e6872a6c3 "
+})
+
+api.getCardList().then(res => console.log(res));
 
 // Card Functions
 
@@ -55,15 +62,17 @@ const createCard = (cardData) => {
 }; 
 
  
-const cardList = new Section( 
-  { 
-    items: initialCards, 
-    renderer: (cardData) => { 
-      cardList.addItem(createCard(cardData)); 
+api.getCardList().then(cardData => {
+  const cardList = new Section( 
+    { 
+      items: cardData, 
+      renderer: (cardData) => { 
+        cardList.addItem(createCard(cardData)); 
+      }, 
     }, 
-  }, 
-  placeList 
-); 
+    placeList 
+  ); 
+})
 
 
 
