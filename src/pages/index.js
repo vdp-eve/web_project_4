@@ -126,7 +126,6 @@ const placesFormValidator = new FormValidator(
   submitNewPlace
 );
 
-cardList.renderItems();
 placesFormValidator.enableValidation();
 accountFormValidator.enableValidation();
 editFormPopup.setEventListeners(); 
