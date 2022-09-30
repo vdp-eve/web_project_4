@@ -35,6 +35,19 @@ authToken: "099989f7-9742-46ef-99f8-aa8e6872a6c3 "
 
 api.getCardList().then(res => console.log(res));
 
+api.getCardList().then(cardData => {
+  const cardList = new Section( 
+    { 
+      items: cardData, 
+      renderer: (cardData) => { 
+        cardList.addItem(createCard(cardData)); 
+      }, 
+    }, 
+    placeList 
+  ); 
+});
+
+
 // Card Functions
 
 const createCard = (cardData) => { 
@@ -60,21 +73,6 @@ const createCard = (cardData) => {
   ); 
   return card.getView(); 
 }; 
-
- 
-api.getCardList().then(cardData => {
-  const cardList = new Section( 
-    { 
-      items: cardData, 
-      renderer: (cardData) => { 
-        cardList.addItem(createCard(cardData)); 
-      }, 
-    }, 
-    placeList 
-  ); 
-});
-
-
 
 const previewImagePopup = new PopupWithImage("#view__image"); 
 
