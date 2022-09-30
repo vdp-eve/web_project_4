@@ -7,7 +7,7 @@ class Api {
 
 // GET https://around.nomoreparties.co/v1/group-12/cards
 getCardList() {
-    return fetch(`${this._baseUrl}/cards`, {
+    return fetch(`https://around.nomoreparties.co/v1/group-12/cards`, {
         headers: {
           authorization: this._authToken
         }
