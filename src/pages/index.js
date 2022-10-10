@@ -33,6 +33,9 @@ baseUrl: "https://around.nomoreparties.co/v1/group-12/cards",
 authToken: "099989f7-9742-46ef-99f8-aa8e6872a6c3 "
 });
 
+api.getCardList().then(res => console.log(res));
+
+
 api.getCardList().then(cardData => {
   const cardList = new Section( 
     { 
@@ -82,7 +85,7 @@ const handleCardClick = (item) => {
 //Card Submit Form
 const addNewCard = new PopupWithForm(popupAddPlaceForm, { 
   handleFormSubmit: (data) => { 
-    getCardList.addItem(createCard(data)); 
+    cardList.addItem(createCard(data)); 
     addNewCard.close(); 
   }, 
 }); 
