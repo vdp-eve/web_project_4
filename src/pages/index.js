@@ -34,7 +34,6 @@ authToken: "099989f7-9742-46ef-99f8-aa8e6872a6c3 "
 });
 
 api.getCardList().then(res => console.log(res))
-api.getCardList().then(cardData => {
   const cardList = new Section( 
     { 
       items: cardData, 
@@ -44,7 +43,6 @@ api.getCardList().then(cardData => {
     }, 
     placeList 
   ); 
-});
 
 // Card Functions
 
