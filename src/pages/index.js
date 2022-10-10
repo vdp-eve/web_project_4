@@ -85,7 +85,7 @@ const handleCardClick = (item) => {
 //Card Submit Form
 const addNewCard = new PopupWithForm(popupAddPlaceForm, { 
   handleFormSubmit: (data) => { 
-    cardList.addItem(createCard(data)); 
+    getCardList.addItem(createCard(data)); 
     addNewCard.close(); 
   }, 
 }); 
