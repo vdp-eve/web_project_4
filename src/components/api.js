@@ -6,7 +6,8 @@ class Api {
 
 
 // GET https://around.nomoreparties.co/v1/group-12/cards
-   getCardList() {
+
+    getCardList() {
       return fetch(`${this._baseUrl}/cards`, {
   headers: {
     authorization: "099989f7-9742-46ef-99f8-aa8e6872a6c3"
@@ -16,15 +17,26 @@ class Api {
   .then((result) => {
     console.log(result);
   })
-        .catch((err) => {
-        console.log(err); // log the error to the console
-      });
-    }
+  .catch((err) => {
+    console.log(err); // log the error to the console
+  });
+}
 
 // GET https://around.nomoreparties.co/v1/group-12/users/me
-// getUserInfo() {
-
-// }
+ getUserInfo() {
+  return fetch(`${this._baseUrl}/users/me`, {
+    headers: {
+      authorization: "099989f7-9742-46ef-99f8-aa8e6872a6c3"
+    }
+  })
+    .then(res => res.json())
+    .then((result) => {
+      console.log(result);
+    })
+    .catch((err) => {
+      console.log(err); // log the error to the console
+    });
+}
 
 
 // getAppInfo { }
