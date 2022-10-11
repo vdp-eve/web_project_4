@@ -60,10 +60,6 @@ const createCard = (cardData) => {
   return card.getView(); 
 }; 
 
-api.getCardList().then(cards => {
-  cardList.renderItems(cards);
-} 
-);
  
 const cardList = new Section( 
   { 
@@ -75,6 +71,10 @@ const cardList = new Section(
   placeList 
 ); 
 
+api.getCardList().then(cards => {
+  cardList.renderItems(cards);
+} 
+);
 
 
 const previewImagePopup = new PopupWithImage("#view__image"); 
