@@ -6,18 +6,17 @@ class Api {
 
 
 // GET https://around.nomoreparties.co/v1/group-12/cards
-getCardList() {
-    return fetch(`${this._baseUrl}/cards`, {
-        headers: {
-          authorization: this._authToken
-        }
-      })
-      .then(res => { res.ok ? res.json() : Promise.reject(`Error: ${res.status}`)
-      })
-      .catch((err) => {
-        console.log(err); // log the error to the console
-      });
-    }
+   getCardList() {
+      return fetch(`${this._baseUrl}/cards`, {
+  headers: {
+    authorization: "099989f7-9742-46ef-99f8-aa8e6872a6c3"
+  }
+})
+  .then(res => res.json())
+  .then((result) => {
+    console.log(result);
+  });
+   }
 
 // GET https://around.nomoreparties.co/v1/group-12/users/me
 // getUserInfo() {
