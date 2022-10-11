@@ -34,7 +34,6 @@ const api = new Api ({
   authToken: "099989f7-9742-46ef-99f8-aa8e6872a6c3"
   });
 
-  api.getCardList().then(res => console.log(res));
 // Card Functions
 
 const createCard = (cardData) => { 
@@ -61,6 +60,10 @@ const createCard = (cardData) => {
   return card.getView(); 
 }; 
 
+api.getCardList().then(cards => {
+  cardList.renderItems(cards);
+} 
+);
  
 const cardList = new Section( 
   { 
@@ -124,7 +127,6 @@ const placesFormValidator = new FormValidator(
   submitNewPlace
 );
 
-cardList.renderItems();
 placesFormValidator.enableValidation();
 accountFormValidator.enableValidation();
 editFormPopup.setEventListeners(); 
