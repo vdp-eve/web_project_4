@@ -71,10 +71,6 @@ const cardList = new Section(
   placeList 
 ); 
 
-api.getCardList().then(cards => {
-  cardList.renderItems(cards);
-} 
-);
 
 
 const previewImagePopup = new PopupWithImage("#view__image"); 
@@ -127,6 +123,11 @@ const placesFormValidator = new FormValidator(
   submitNewPlace
 );
 
+
+api.getCardList().then(cards => {
+  cardList.renderItems(cards);
+} 
+);
 placesFormValidator.enableValidation();
 accountFormValidator.enableValidation();
 editFormPopup.setEventListeners(); 
