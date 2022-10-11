@@ -39,7 +39,12 @@ const api = new Api ({
     careerSelector: accountTitle
   }); 
 
-  api.getUserInfo().then( res => console.log(res));
+  api.getUserInfo().then(userData => {
+    UserInfo.setUserInfo({
+      userName: userData.name,
+      userDescription: userData.about,
+    })
+  });
 
 // Card Functions
 
