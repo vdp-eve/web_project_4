@@ -15,8 +15,11 @@ class Api {
   .then(res => res.json())
   .then((result) => {
     console.log(result);
-  });
-   }
+  })
+        .catch((err) => {
+        console.log(err); // log the error to the console
+      });
+    }
 
 // GET https://around.nomoreparties.co/v1/group-12/users/me
 // getUserInfo() {
