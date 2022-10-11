@@ -31,7 +31,7 @@ import {
 
 const api = new Api ({
   baseUrl: "https://around.nomoreparties.co/v1/group-12",
-  authToken: "099989f7-9742-46ef-99f8-aa8e6872a6c3 "
+  authToken: "099989f7-9742-46ef-99f8-aa8e6872a6c3"
   });
 
   api.getCardList().then(res => console.log(res));
