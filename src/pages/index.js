@@ -39,10 +39,10 @@ const api = new Api ({
     careerSelector: accountTitle
   }); 
 
- api.getUserInfo().then(userData => {
-    UserInfo.setUserInfo({
-      accountName: userData.name,
-      accountTitle: userData.about
+  api.getUserInfo().then(userData => {
+    UserInfo.getUserInfo({
+      name: userData.name,
+      occupation: userData.about
     })
   });
 
