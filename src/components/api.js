@@ -1,8 +1,11 @@
 class Api {
-    constructor({baseUrl, authToken}) {
+    constructor({baseUrl, authToken, name, about}) {
         this._baseUrl = baseUrl;
         this._authToken = authToken;
+        this._name = name,
+        this._about = about
     }
+
 
 
 // GET https://around.nomoreparties.co/v1/group-12/cards
