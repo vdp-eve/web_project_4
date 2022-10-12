@@ -41,8 +41,8 @@ const api = new Api ({
 
   api.getUserInfo().then(userData => {
     UserInfo.setUserInfo({
-      userName: userData.name,
-      userDescription: userData.about,
+      name: userData.name,
+      occupation: userData.about,
     })
   });
 
