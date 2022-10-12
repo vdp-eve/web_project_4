@@ -41,10 +41,11 @@ const api = new Api ({
 
  api.getUserInfo().then(userData => {
     UserInfo.setUserInfo({
-      nameSelector: userData.name,
-      careerSelector: userData.about
+      accountName: userData.name,
+      accountTitle: userData.about
     })
   });
+
 
 // Card Functions
 
