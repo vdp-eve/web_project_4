@@ -2,8 +2,8 @@ class Api {
     constructor({baseUrl, authToken, name, about}) {
         this._baseUrl = baseUrl;
         this._authToken = authToken;
-        this._name = name,
-        this._about = about
+        this._name = name;
+        this._about = about;
     }
 
 
