@@ -6,6 +6,7 @@ import FormValidator from "../components/FormValidator.js";
 import Card from "../components/Card.js";
 import PopupWithForm from "../components/PopupWithForm.js";
 import PopupWithImage from "../components/PopupWithImage.js";
+import popupWithVerification from "../components/popupWithVerification.js";
 import Section from "../components/Section.js";
 import Api from "../components/api.js";
 import UserInfo from "../components/UserInfo.js";
@@ -34,19 +35,20 @@ const api = new Api ({
   authToken: "099989f7-9742-46ef-99f8-aa8e6872a6c3"
   });
 
+  /*
+
   const newUserInfo = new UserInfo({ 
     nameSelector: accountName, 
     careerSelector: accountTitle
   }); 
 
   api.getUserInfo().then(userData => {
-    UserInfo.getUserInfo({
+    UserInfo.setUserInfo({
       name: userData.name,
       occupation: userData.about
     })
   });
-
-
+*/
 // Card Functions
 
 const createCard = (cardData) => { 
@@ -73,16 +75,17 @@ const createCard = (cardData) => {
   return card.getView(); 
 }; 
 
+const renderCard = cardData => {
+  const cardElement = createCard(cardData);
+  cardList.addItem(cardElement);
+};
  
-const cardList = new Section( 
-  { 
-    items: initialCards, 
-    renderer: (cardData) => { 
-      cardList.addItem(createCard(cardData)); 
-    }, 
-  }, 
-  placeList 
-); 
+const cardList = new Section(
+  {
+    renderer: renderCard
+  },
+  placeList
+);
 
 
 
