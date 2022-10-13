@@ -11,11 +11,9 @@ class Section {
     this._container.prepend(element); 
   } 
 
-  renderItems() { 
-    this._renderedItems.forEach((item) => { 
-      this._renderer(item); 
-    }); 
-  } 
+  renderItems(items) {
+    items.forEach(this._renderer);
+  }
 } 
 
 
