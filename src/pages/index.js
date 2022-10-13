@@ -136,10 +136,6 @@ const placesFormValidator = new FormValidator(
 );
 
 
-api.getCardList().then(cards => {
-  cardList.renderItems(cards);
-} 
-);
 placesFormValidator.enableValidation();
 accountFormValidator.enableValidation();
 editFormPopup.setEventListeners(); 
