@@ -1,45 +1,42 @@
 .card {
-	width: 282px;
-	height: 361px;
+	list-style: none;
 	border-radius: 10px;
 	background-color: #fff;
+	color: #000;
+	object-fit: cover;
+	width: 100%;
 	overflow: hidden;
 	position: relative;
 }
 
 .card__image {
 	display: block;
-	-o-object-fit: cover;
+	height: 282px;
 	object-fit: cover;
 	width: 100%;
-	height: 282px;
 	cursor: pointer;
 
 }
 
 .card__place-title {
-	margin: 25px 15px 31px 21px;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
-	justify-content: space-between;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
 	align-items: center;
+	justify-content: space-between;
+	margin: 25px 15px 25px 21px;
+	text-decoration: none;
+	padding: 0;
 }
 
 .card__place-name {
-	margin: 0;
-	-o-text-overflow: ellipsis;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	overflow: hidden;
-	color: #000;
-	font-size: 24px;
+	font-family: "Inter", sans-serif;
 	font-weight: 900;
-	text-align: left;
+	font-size: 24px;
+	line-height: 29px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	padding: 0;
+	margin: 0;
 }
 
 .card__place-favorite {
@@ -48,11 +45,8 @@
 	background-repeat: no-repeat;
 	min-width: 21px;
 	height: 19px;
-	-webkit-transition: 0.2s;
-	-o-transition: 0.2s;
 	transition: 0.2s;
 	color: transparent;
-	border: none;
 }
 
 .card__place-favorite:hover {
