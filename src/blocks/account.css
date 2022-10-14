@@ -1,32 +1,19 @@
 .account {
-	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
-	display: -webkit-box;
-	display: -ms-flexbox;
+	color: #fff;
 	display: flex;
+	margin: auto;
 	max-width: 880px;
-	width: 100%;
-	margin: 0 auto;
-	-webkit-transition: 0.3s;
-	-o-transition: 0.3s;
-	transition: 0.3s;
 
 }
 
 .account__edit-section {
-	max-width: 415px;
-	width: 100%;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
 	flex-direction: column;
 	gap: 16px;
+	max-width: 415px;
 	margin: auto 0 auto 30px;
 }
-
 .account__edit {
 	display: -webkit-box;
 	display: -ms-flexbox;
