@@ -35,8 +35,6 @@ const api = new Api ({
   authToken: "099989f7-9742-46ef-99f8-aa8e6872a6c3"
   });
 
-  /*
-
   const newUserInfo = new UserInfo({ 
     nameSelector: accountName, 
     careerSelector: accountTitle
@@ -48,7 +46,7 @@ const api = new Api ({
       occupation: userData.about
     })
   });
-*/
+
 // Card Functions
 
 const createCard = (cardData) => { 
