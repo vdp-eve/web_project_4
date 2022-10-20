@@ -14,7 +14,7 @@ export const addPlacesOpenBtn = document.querySelector(".account__add-button");
 export const popupPlaceName = document.querySelector(".popup__place-name");
 export const popupPlaceUrl = document.querySelector(".js-input-type-place-url");
 export const submitNewPlace = document.querySelector(".popup__place-form");
-export const editaccountPicButton = document.querySelector(".account__image-edit-btn");
+export const editAccountPicButton = document.querySelector(".account__image-edit-btn");
 export const submitNewaccountPic = document.querySelector(".popup__edit-account-pic-form");
 
 // Cards List 
