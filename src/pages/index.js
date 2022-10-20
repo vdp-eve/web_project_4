@@ -41,7 +41,7 @@ let userId;
 const confirmationPopup = new popupWithVerification("#delete-popup", { 
   loadingButtonText: "Deleting..." 
 }); 
-onfirmationPopup.setEventListeners(); 
+confirmationPopup.setEventListeners(); 
 
  
 const renderCard = cardDataPlaceHolder => { 
