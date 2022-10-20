@@ -31,6 +31,7 @@ import {
   addPopupSelector,
   validationSettings
 } from "../utils/constants.js";
+
 let userId;
 
 // Card Functions
@@ -163,7 +164,7 @@ const toggleLike = cardPlaceholder => {
       console.log(err);
     });
 };
-const editaccount = accountData => {
+const editAccount = accountData => {
   editFormPopup.renderSaving(true);
   api
     .setUserInfo(accountData)
@@ -196,7 +197,7 @@ const addACard = cardDataPlaceholder => {
       addNewCardPopup.renderSaving(false);
     });
 };
-const changeaccountImage = accountImageUrl => {
+const changeAccountImage = accountImageUrl => {
   editPofilePicForm.renderSaving(true);
   api
     .updateaccountPic(accountImageUrl)
@@ -245,6 +246,6 @@ api
     console.log(err);
   });
 
-  placesFormValidator.enableValidation();
+placesFormValidator.enableValidation();
 accountFormValidator.enableValidation();
 accountPicFormValidator.enableValidation();
