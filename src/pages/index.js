@@ -113,7 +113,7 @@ const editPofilePicForm = new PopupWithForm(
 );
 
 editPofilePicForm.setEventListeners();
-editaccountPicButton.addEventListener("click", () => {
+editAccountPicButton.addEventListener("click", () => {
   editPofilePicForm.open();
   accountPicFormValidator.resetValidation();
 });
