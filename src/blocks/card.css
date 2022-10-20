@@ -45,8 +45,6 @@
 	background-repeat: no-repeat;
 	min-width: 21px;
 	height: 19px;
-	-webkit-transition: 0.2s;
-	-o-transition: 0.2s;
 	transition: 0.2s;
 	color: transparent;
 	border: none;
