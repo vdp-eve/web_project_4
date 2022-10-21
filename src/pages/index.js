@@ -103,7 +103,6 @@ editAccountOpenBtn.addEventListener("click", () => {
   popupAccountName.value = name; 
   popupAccountIconsTitle.value = about; 
 
-reviewer 
   editFormPopup.open(); 
   accountFormValidator.resetValidation(); 
 }); 
