@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Around the US" />
+    <meta name="keywords" content="Around the US" />
+    <meta name="author" content="Evelyne Benazzouz" />
+    <title>Around The U.S.</title>
+ 
+</head>
+
+<body class="pages">
+    <div class="page">
+        <header class="header">
+            <img src="<%=require('./images/logo.svg')%>" 
+            class="header__logo" 
+            alt="Homeland" />
+        </header>
+        <main class="main">
+            <section class="account">
+                <div class="account__image-container">
+                    <img class="account__image" 
+                    src="<%=require('./images/blank-user.jpg')%>" 
+                    alt="Photo Blank" />
+                    <div class="account__image-edit">
+                        <button class="account__image-edit-btn">
+                            <img class="account__image-edit-icon" src="<%=require('./images/Vector.svg')%>" alt="Edit icon" />
+                        </button>
+                    </div>
+                </div>  
+                <div class="account__edit-section">
+                    <div class="account__edit">
+                        <h1 class="account__name"></h1>
+                        <button class="account__edit-button" type="button">
+                            <img class="account__edit-icon" 
+                            src="<%=require('./images/edit.svg')%>" 
+                            alt="Edit button" />
+                        </button>
+                    </div>
+                    <p class="account__description"></p>
+                </div>
+
+                <button class="account__add-button" type="button">
+                    <img class="account__add-icon"
+                     src="<%=require('./images/plus-sign.svg')%>"
+                      alt="Add place" />
+                </button>
+            </section>
+            <section class="cards">
+                <ul class="cards__list"></ul>
+                <div class="cards__no-places">
+                    <p class="cards__no-places-text">No images to display</p>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <p class="footer__copyright">© 2022 Around The U.S.</p>
+        </footer>
+    </div>
+    <div id="account__edit" class="popup">
+        <div class="popup__overlay"></div>
+        <div class="popup__form-card">
+            <button class="popup__close-btn popup__edit-close" type="button">
+                <img class="popup__close-icon" 
+                src="<%=require('./images/close-icon.svg')%>" 
+                alt="" />
+            </button>
+            <form class="popup__edit-form popup__form" name="editAccountForm">
+                <h2 class="popup__form-label">Edit Account</h2>
+                <input id="name-input" 
+                minlength="2" 
+                maxlength="40"
+                 class="popup__form-input popup__account-name"
+                    name="name" 
+                    type="text" 
+                    placeholder="Name"
+                     required /><span
+                    class="popup__input-type-error name-input-error"></span>
+                <input id="about-input"
+                 minlength="2"
+                  maxlength="200"
+                    class="popup__form-input popup__account-about" name="about" type="text"
+                    placeholder="About Me" 
+                     required /><span
+                    class="popup__input-type-error about-input-error"></span>
+                <button class="popup__button" type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+    <div id="add__place" class="popup">
+        <div class="popup__overlay"></div>
+        <div class="popup__form-card">
+            <button class="popup__close-btn popup__place-close-btn" type="button">
+                <img class="popup__close-icon" 
+                src="<%=require('./images/close-icon.svg')%>"
+                 alt="" />
+            </button>
+            <form class="popup__place-form popup__form" name="addPlaceForm">
+                <h2 class="popup__form-label">New Place</h2>
+                <input id="place-name"
+                 minlength="2" 
+                 maxlength="40"
+                    class="popup__form-input popup__place-name" name="name" type="text" placeholder="Title"
+                    required /><span class="popup__input-type-error place-name-error"></span>
+                <input id="place-link" 
+                class="popup__form-input js-input-type-place-url"
+                 name="link"
+                    type="url" 
+                    placeholder="Url Link"
+                     required /><span
+                    class="popup__input-type-error place-link-error"></span>
+                <button class="popup__button" type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+    <div id="edit-account-pic-popup" class="popup">
+        <div class="popup__overlay"></div>
+        <div class="popup__form-card">
+            <button class="popup__close-btn popup__place-close-btn" type="button">
+                <img class="popup__close-icon" 
+                src="<%=require('./images/close-icon.svg')%>" 
+                alt="" />
+            </button>
+            <form class="popup__edit-account-pic-form popup__form" name="editAccountPicForm">
+                <h2 class="popup__form-label">Change Account Picture</h2>
+                <input id="js-input-edit-account-pic-input" 
+                class="popup__form-input js-input-type-edit-account-pic"
+                 name="avatar"
+                    type="url" 
+                    placeholder="Url Link" 
+                    required /><span
+                    class="popup__input-type-error js-input-edit-account-pic-input-error"></span>
+                <button class="popup__button" type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+    <div id="delete-popup" class="popup">
+        <div class="popup__overlay"></div>
+        <div class="popup__form-card">
+            <button class="popup__close-btn popup__place-close-btn" type="button">
+                <img class="popup__close-icon"
+                 src="<%=require('./images/close-icon.svg')%>"
+                  alt="" />
+            </button>
+            <form class="popup__delete-form popup__form" name="deleteCard">
+                <h2 class="popup__form-label popup__form-label-delete-confirmation">Are you sure?</h2>
+                <button class="popup__button" type="submit">Yes</button>
+            </form>
+        </div>
+    </div>
+    <div id="view__image" class="popup">
+        <div class="popup__overlay"></div>
+        <div class="popup__form-card popup__form-image">
+            <button class="popup__close-btn popup__image-close-btn" type="button">
+                <img class="popup__close-icon" src="<%=require('./images/close-icon.svg')%>" alt="" />
+            </button>
+            <img class="popup__image-preview" 
+            src="<%=require('./images/loader.png')%>"
+             alt="Photo of place" />
+            <p class="popup__preview-name">loading...</p>
+        </div>
+    </div>
+    <template id="card-template">
+        <li class="card">
+            <img class="card__image" 
+            src="<%=require('./images/loader.png')%>"
+             alt="Photo of place" />
+            <button class="card__trash">
+                <img class="card__trash-image hide" src="<%=require('./images/Trash.svg')%>" alt="Trash" />
+            </button>
+            <div class="card__place-title">
+                <h2 class="card__place-name">loading...</h2>
+                <div class="card__place-container">
+                    <button type="button" class="card__place-favorite"></button>
+                    <p class="card__place-num">0</p>
+                </div>
+            </div>
+        </li>
+    </template>
+</body>
+
+</html>
