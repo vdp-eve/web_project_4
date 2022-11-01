@@ -24,11 +24,11 @@ export default class PopupWithForm extends Popup {
   }
 
   _getInputValues() {
-   const objData =  {}
-    this._inputList.forEach(input => {
-      this._objData[input.name] = input.value;
+    const objData =  {}
+    this._inputList.forEach(input => { 
+          objData[input.name] = input.value; 
     });
-    return objData
+    return objData 
   }
 
   setInputValues(data) {
