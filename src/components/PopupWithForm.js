@@ -33,7 +33,7 @@ export default class PopupWithForm extends Popup {
 
   setInputValues(data) {
     this._objInput = {};
-    thisRenderSaving._inputList.forEach(input => {
+    this._inputList.forEach(input => {
       this._objInput[input.name] = data[input.value];
     });
   }
