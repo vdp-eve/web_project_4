@@ -31,15 +31,6 @@ export default class PopupWithForm extends Popup {
     return objData 
   }
 
-  setInputValues(data) {
-    this._objInput = {};
-    thisrenderSaving._inputList.forEach(input => {
-      this._objInput[input.name] = data[input.value];
-    });
-  }
-
-  
-
   close() {
     super.close();
     this._form.reset();
